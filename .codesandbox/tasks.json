@@ -1,0 +1,97 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "clean": {
+      "name": "clean",
+      "command": "yarn clean"
+    },
+    "install:clean": {
+      "name": "install:clean",
+      "command": "yarn install:clean"
+    },
+    "dev": {
+      "name": "dev",
+      "command": "yarn dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "prebuild": {
+      "name": "prebuild",
+      "command": "yarn prebuild"
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build"
+    },
+    "lint": {
+      "name": "lint",
+      "command": "yarn lint"
+    },
+    "lint:fix": {
+      "name": "lint:fix",
+      "command": "yarn lint:fix"
+    },
+    "preview": {
+      "name": "preview",
+      "command": "yarn preview"
+    },
+    "serve": {
+      "name": "serve",
+      "command": "yarn serve"
+    },
+    "test": {
+      "name": "test",
+      "command": "yarn test"
+    },
+    "test:run": {
+      "name": "test:run",
+      "command": "yarn test:run"
+    },
+    "test:coverage": {
+      "name": "test:coverage",
+      "command": "yarn test:coverage"
+    },
+    "test:e2e": {
+      "name": "test:e2e",
+      "command": "yarn test:e2e"
+    },
+    "prettier": {
+      "name": "prettier",
+      "command": "yarn prettier"
+    },
+    "prettier:check": {
+      "name": "prettier:check",
+      "command": "yarn prettier:check"
+    },
+    "prettier:fix": {
+      "name": "prettier:fix",
+      "command": "yarn prettier:fix"
+    },
+    "format:check": {
+      "name": "format:check",
+      "command": "yarn format:check"
+    },
+    "format:fix": {
+      "name": "format:fix",
+      "command": "yarn format:fix"
+    },
+    "precommit:all": {
+      "name": "precommit:all",
+      "command": "yarn precommit:all"
+    },
+    "precommit": {
+      "name": "precommit",
+      "command": "yarn precommit"
+    }
+  }
+}
