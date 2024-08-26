@@ -1,0 +1,42 @@
+@import 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+@import './typography.scss';
+@import './colors.scss';
+
+* {
+   margin: 0;
+}
+
+body {
+   font-family: Rubik, sans-serif;
+   margin: 0;
+}
+
+.button {
+   border-radius: 8px;
+   border: 1px solid transparent;
+   padding: 10px 1.2em;
+   font-size: 1em;
+   font-weight: 500;
+   font-family: inherit;
+   cursor: pointer;
+   transition: border-color 0.25s;
+}
+
+@mixin removeDefaultBtnStyle {
+   // This removes styles added by default to button elements.
+   // For when something should semantically be a button,
+   // but isn't buttony in appearance.
+   background-color: transparent;
+   border: none;
+   margin: 0;
+   padding: 0;
+   text-align: inherit;
+   font: inherit;
+   border-radius: 0;
+   appearance: none; // Just in case we missed anything.
+}
+
+@mixin removeDefaultAnchorStyle {
+   text-decoration: none;
+   color: inherit;
+}

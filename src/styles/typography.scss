@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$font-family: 'Rubik', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extraBold: 800;
+$font-weight-black: 900;
+
+body {
+   font-family: $font-family;
+}
+
+h1 {
+   font-size: 2rem;
+}
+
+h2 {
+   font-size: 1.8rem;
+}
+
+h3 {
+   font-size: 1.6rem;
+}
+
+h4 {
+   font-size: 1.4rem;
+}
+
+h5 {
+   font-size: 1.2rem;
+}
+
+h6 {
+   font-size: 1rem;
+}
+
+p,
+span,
+button {
+   font-size: 0.9rem;
+}
