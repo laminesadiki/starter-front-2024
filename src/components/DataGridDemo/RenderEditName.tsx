@@ -15,10 +15,11 @@ export function EditName(props: GridEditInputCellProps) {
       apiRef.current.stopCellEditMode({ id: props.id, field: props.field });
    };
 
-   const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === 'Enter') {
-         console.log('Click Enter');
+   const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.code === 'Enter') {
+         event.preventDefault();
          handleDoneClick();
+         console.log('Click Enter');
       }
    };
 
