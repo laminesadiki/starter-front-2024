@@ -5,7 +5,7 @@ import {
    GridTreeNodeWithRender,
    useGridApiContext,
 } from '@mui/x-data-grid';
-import { Edit, TextSnippet, Folder } from '@mui/icons-material/';
+import { Edit, TextSnippet, Folder } from '@mui/icons-material';
 import { MouseEvent } from 'react';
 
 export default function RenderCellFileOrFolder(
