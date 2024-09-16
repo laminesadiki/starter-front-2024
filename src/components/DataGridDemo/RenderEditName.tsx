@@ -8,7 +8,7 @@ import {
 } from '@mui/x-data-grid';
 import { Done as DoneIcon, Folder as FolderIcon } from '@mui/icons-material';
 
-function EditName(props: GridEditInputCellProps) {
+export function EditName(props: GridEditInputCellProps) {
    const apiRef = useGridApiContext();
 
    const handleDoneClick = () => {
@@ -31,8 +31,4 @@ function EditName(props: GridEditInputCellProps) {
          </Button>
       </Box>
    );
-}
-
-export function RenderEditName(params: GridRenderEditCellParams<any, any>) {
-   return <EditName {...params} />;
 }

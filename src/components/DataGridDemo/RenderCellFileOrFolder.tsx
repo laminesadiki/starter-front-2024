@@ -15,7 +15,7 @@ export default function RenderCellFileOrFolder(
    const apiRef = useGridApiContext();
 
    const handleEditClick = (event: MouseEvent<HTMLButtonElement>) => {
-      event.stopPropagation(); // stop select row
+      // event.stopPropagation(); // stop select row
       apiRef.current.startCellEditMode({
          id: props.id,
          field: props.field,

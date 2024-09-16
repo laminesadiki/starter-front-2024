@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-// import RenderCellFileOrFolder from './RenderCellFileOrFolder';
-// import { RenderEditName } from './RenderEditName';
+import RenderCellFileOrFolder from './RenderCellFileOrFolder';
+import { EditName } from './RenderEditName';
 
 export default function DataGridDemo() {
    const columns: GridColDef<(typeof rows)[number]>[] = [
@@ -12,8 +12,8 @@ export default function DataGridDemo() {
          headerName: 'File Name',
          width: 400,
          editable: true,
-         // renderCell: params => <RenderCellFileOrFolder {...params} />,
-         // renderEditCell: RenderEditName,
+         renderCell: params => <RenderCellFileOrFolder {...params} />,
+         renderEditCell: params => <EditName {...params} />,
       },
    ];
 
