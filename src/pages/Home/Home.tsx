@@ -1,3 +1,9 @@
+import DataGridDemo from '@components/DataGridDemo/DataGridDemo';
+
 export default function Home() {
-   return <div>Home</div>;
+   return (
+      <div>
+         <DataGridDemo />
+      </div>
+   );
 }
