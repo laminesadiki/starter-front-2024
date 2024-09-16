@@ -1,7 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import userReducer from './slices/user.slice';
-import searchInputReducer from './slices/directorySearchInput.slice';
-import expertiseDetailsReducer from './slices/expertiseDetails.slice';
 import { backendServerApi } from '@redux/api';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
@@ -9,8 +7,6 @@ import type { PreloadedState } from '@reduxjs/toolkit';
 
 const rootReducer = combineReducers({
    userReducer,
-   searchInputReducer,
-   expertiseDetailsReducer,
    [backendServerApi.reducerPath]: backendServerApi.reducer,
 });
 
