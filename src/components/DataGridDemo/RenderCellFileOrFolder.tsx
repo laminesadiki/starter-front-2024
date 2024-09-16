@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Badge, Box, Button, SvgIcon, Tooltip } from '@mui/material';
+import { Button } from '@mui/material';
 import {
    GridRenderCellParams,
    GridTreeNodeWithRender,
    useGridApiContext,
 } from '@mui/x-data-grid';
 import { Edit, TextSnippet, Folder } from '@mui/icons-material/';
-import { MouseEvent, MouseEventHandler } from 'react';
+import { MouseEvent } from 'react';
 
 export default function RenderCellFileOrFolder(
    props: GridRenderCellParams<any, any, any, GridTreeNodeWithRender>,

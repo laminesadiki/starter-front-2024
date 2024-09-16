@@ -5,7 +5,8 @@ import Keycloak, {
    KeycloakTokenParsed,
 } from 'keycloak-js';
 import { CallBackType } from '../types';
-import { setCookieWithSubDomainSharing } from '@utils/index';
+
+const setCookieWithSubDomainSharing = () => {};
 
 export enum CookieName {
    ACCESS_TOKEN = 'access_token',
@@ -55,7 +56,7 @@ const initKeycloak = async (onAuthenticatedCallback: CallBackType) => {
          });
       }
 
-      setCookieWithSubDomainSharing(CookieName.ACCESS_TOKEN, _kc.token || '');
+      setCookieWithSubDomainSharing();
 
       if (authenticated) {
          onAuthenticatedCallback();
@@ -75,7 +76,7 @@ const getToken = async () => {
    if (_kc.isTokenExpired()) {
       await updateToken();
    }
-   setCookieWithSubDomainSharing(CookieName.ACCESS_TOKEN, _kc.token || '');
+   setCookieWithSubDomainSharing();
    return _kc.token;
 };
 
@@ -94,7 +95,7 @@ const isLoggedIn = (): boolean => !!_kc.token;
 const updateToken = async () => {
    try {
       await _kc.updateToken(5);
-      setCookieWithSubDomainSharing(CookieName.ACCESS_TOKEN, _kc.token || '');
+      setCookieWithSubDomainSharing();
    } catch (error) {
       console.log({ error });
    }
