@@ -13,5 +13,5 @@ export default function RenderOnAuthenticated(props: {
       NODE_ENV === EnvName.DISABLE_KEYCLOAK
    )
       return children;
-   return <div>UnAuthorized</div>
+   return <div>UnAuthorized</div>;
 }

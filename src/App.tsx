@@ -7,13 +7,13 @@ function App() {
    useNavigatorLang();
 
    return (
-         <BrowserRouter>
-            <Routes>
-               {ROUTES.map(({ Page, path }: RouteType, index: number) => (
-                  <Route key={index} path={path} element={<Page />} />
-               ))}
-            </Routes>
-         </BrowserRouter>
+      <BrowserRouter>
+         <Routes>
+            {ROUTES.map(({ Page, path }: RouteType, index: number) => (
+               <Route key={index} path={path} element={<Page />} />
+            ))}
+         </Routes>
+      </BrowserRouter>
    );
 }
 
